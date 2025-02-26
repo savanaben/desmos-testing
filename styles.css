@@ -160,10 +160,11 @@ button:hover {
     width: 100%;
 }
 
-#calculator .dcg-expressions-branding,
+
+/* #calculator .dcg-expressions-branding,
 #calculator .dcg-graphpaper-branding {
     display: none;
-}
+} */
 
 .TDS_PS_L1 #calculator .dcg-main,
 .TDS_PS_L1 #calculator .dcg-basic-list,
@@ -213,6 +214,38 @@ so that we don't double up on font size increase */
 }
 .TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-container .dcg-expression-top-bar {
     font-size: 1.20em;
+}
+
+
+
+/* error tooltip */
+
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-tooltip-positioning-container .dcg-tooltip-message {
+    font-size: 1.2em;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-tooltip-positioning-container .dcg-tooltip-message {
+    font-size: 1.4em;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-tooltip-positioning-container .dcg-tooltip-message {
+    font-size: 1.5em;
+}
+
+
+/* the slider options menu (click on the reverse arrow button when a 
+slider shows to open this obscure popover) */
+
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-options-menu-container {
+    font-size: 1.2em;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-options-menu-container {
+    font-size: 1.4em;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-options-menu-container {
+    font-size: 1.5em;
 }
 
 
