@@ -1,0 +1,348 @@
+#calculator {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#calculator .dcg-expressions-branding,
+#calculator .dcg-graphpaper-branding {
+  display: none;
+}
+.TDS_PS_L1 #calculator .dcg-main,
+.TDS_PS_L1 #calculator .dcg-basic-list,
+.TDS_PS_L1 #calculator .dcg-matrix-list{
+  font-size: 1.5em;
+}
+.TDS_PS_L2 #calculator .dcg-main,
+.TDS_PS_L2 #calculator .dcg-basic-list,
+.TDS_PS_L2 #calculator .dcg-matrix-list{
+  font-size: 2em;
+}
+.TDS_PS_L3 #calculator .dcg-main,
+.TDS_PS_L3 #calculator .dcg-basic-list,
+.TDS_PS_L3 #calculator .dcg-matrix-list{
+  font-size: 2.5em;
+}
+.TDS_PS_L4 #calculator .dcg-main,
+.TDS_PS_L4 #calculator .dcg-basic-list,
+.TDS_PS_L4 #calculator .dcg-matrix-list,
+.TDS_PS_L5 #calculator .dcg-main,
+.TDS_PS_L5 #calculator .dcg-basic-list,
+.TDS_PS_L5 #calculator .dcg-matrix-list,
+.TDS_PS_L6 #calculator .dcg-main,
+.TDS_PS_L6 #calculator .dcg-basic-list,
+.TDS_PS_L6 #calculator .dcg-matrix-list,
+.TDS_PS_L7 #calculator .dcg-main,
+.TDS_PS_L7 #calculator .dcg-basic-list,
+.TDS_PS_L7 #calculator .dcg-matrix-list,
+.TDS_PS_L8 #calculator .dcg-main,
+.TDS_PS_L8 #calculator .dcg-basic-list,
+.TDS_PS_L8 #calculator .dcg-matrix-list{
+  font-size: 3em;
+}
+.TDS_PS_L1 #calculator .dcg-keypad-btn{
+  font-size: 1.25em;
+}
+.TDS_PS_L2 #calculator .dcg-keypad-btn {
+  font-size: 1.5em;
+}
+.TDS_PS_L2 #calculator .dcg-keypad-btn-container {
+  height: 50px;
+}
+.TDS_PS_L3 #calculator .dcg-keypad-btn {
+  font-size: 2em;
+}
+.TDS_PS_L3 #calculator .dcg-keypad-btn-container {
+  height: 55px;
+}
+.TDS_PS_L4 #calculator .dcg-keypad-btn,
+.TDS_PS_L5 #calculator .dcg-keypad-btn,
+.TDS_PS_L6 #calculator .dcg-keypad-btn,
+.TDS_PS_L7 #calculator .dcg-keypad-btn,
+.TDS_PS_L8 #calculator .dcg-keypad-btn {
+  font-size: 2.5em;
+}
+.TDS_PS_L4 #calculator .dcg-keypad-btn-container,
+.TDS_PS_L5 #calculator .dcg-keypad-btn-container,
+.TDS_PS_L6 #calculator .dcg-keypad-btn-container,
+.TDS_PS_L7 #calculator .dcg-keypad-btn-container,
+.TDS_PS_L8 #calculator .dcg-keypad-btn-container {
+  height: 60px;
+}
+.TDS_PS_L1 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L2 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L3 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L4 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L5 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L6 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L7 #calculator .dcg-sci-functions .dcg-keypad-btn,
+.TDS_PS_L8 #calculator .dcg-sci-functions .dcg-keypad-btn {
+  font-size: 1.25em
+}
+.TDS_PS_L3 #calculator .dcg-scientific-container .dcg-keypad-btn-container {
+  height: 60px;
+}
+.TDS_PS_L4 #calculator .dcg-scientific-container .dcg-keypad-btn-container,
+.TDS_PS_L5 #calculator .dcg-scientific-container .dcg-keypad-btn-container,
+.TDS_PS_L6 #calculator .dcg-scientific-container .dcg-keypad-btn-container,
+.TDS_PS_L7 #calculator .dcg-scientific-container .dcg-keypad-btn-container,
+.TDS_PS_L8 #calculator .dcg-scientific-container .dcg-keypad-btn-container {
+  height: 65px;
+}
+.TDS_PS_L4 #calculator .dcg-scientific-container .dcg-keypad-btn-container .mq-math-mode .mq-fraction,
+.TDS_PS_L5 #calculator .dcg-scientific-container .dcg-keypad-btn-container .mq-math-mode .mq-fraction,
+.TDS_PS_L6 #calculator .dcg-scientific-container .dcg-keypad-btn-container .mq-math-mode .mq-fraction,
+.TDS_PS_L7 #calculator .dcg-scientific-container .dcg-keypad-btn-container .mq-math-mode .mq-fraction,
+.TDS_PS_L8 #calculator .dcg-scientific-container .dcg-keypad-btn-container .mq-math-mode .mq-fraction {
+  font-size: .7em
+}
+
+.TDS_PS_L2 .dcg-keypad-control-bar,
+.TDS_PS_L3 .dcg-keypad-control-bar {
+  height: 50px;
+  font-size: 1.6em;
+}
+.TDS_PS_L2 .dcg-keypad-control-btn,
+.TDS_PS_L3 .dcg-keypad-control-btn {
+  height: 40px;
+  line-height: 50px;
+  width: inherit !important;
+  max-width: inherit !important;
+}
+.TDS_PS_L2 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L2 .dcg-keypad-control-btn[dcg-command="clear"],
+.TDS_PS_L2 .dcg-keypad-control-btn[dcg-command="backspace"],
+.TDS_PS_L3 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L3 .dcg-keypad-control-btn[dcg-command="clear"], 
+.TDS_PS_L3 .dcg-keypad-control-btn[dcg-command="backspace"] {
+  line-height: 2em;
+  height: auto;
+}
+.TDS_PS_L2 .dcg-keypad-control-btn.dcg-selectable-btn,
+.TDS_PS_L3 .dcg-keypad-control-btn.dcg-selectable-btn {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.TDS_PS_L2 .dcg-keypad-control-toggle,
+.TDS_PS_L3 .dcg-keypad-control-toggle {
+  line-height: 38px;
+  height: 40px;
+  width: inherit !important;
+  max-width: inherit !important;
+  margin: 5px;
+}
+.TDS_PS_L4 .dcg-keypad-control-bar,
+.TDS_PS_L5 .dcg-keypad-control-bar,
+.TDS_PS_L6 .dcg-keypad-control-bar,
+.TDS_PS_L7 .dcg-keypad-control-bar,
+.TDS_PS_L8 .dcg-keypad-control-bar {
+  height: 60px;
+  font-size: 2em;
+}
+.TDS_PS_L4 .dcg-keypad-control-btn,
+.TDS_PS_L5 .dcg-keypad-control-btn,
+.TDS_PS_L6 .dcg-keypad-control-btn,
+.TDS_PS_L7 .dcg-keypad-control-btn,
+.TDS_PS_L8 .dcg-keypad-control-btn {
+  height: 50px;
+  line-height: 60px;
+  width: inherit !important;
+  max-width: inherit !important;
+}
+.TDS_PS_L4 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L4 .dcg-keypad-control-btn[dcg-command="clear"],
+.TDS_PS_L4 .dcg-keypad-control-btn[dcg-command="backspace"],
+.TDS_PS_L5 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L5 .dcg-keypad-control-btn[dcg-command="clear"],
+.TDS_PS_L5 .dcg-keypad-control-btn[dcg-command="backspace"],
+.TDS_PS_L6 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L6 .dcg-keypad-control-btn[dcg-command="clear"],
+.TDS_PS_L6 .dcg-keypad-control-btn[dcg-command="backspace"],
+.TDS_PS_L7 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L7 .dcg-keypad-control-btn[dcg-command="clear"],
+.TDS_PS_L7 .dcg-keypad-control-btn[dcg-command="backspace"],
+.TDS_PS_L8 .dcg-keypad-control-btn[dcg-command="clearall"],
+.TDS_PS_L8 .dcg-keypad-control-btn[dcg-command="clear"]
+.TDS_PS_L8 .dcg-keypad-control-btn[dcg-command="backspace"] {
+  line-height: 2em;
+  height: auto;
+}
+.TDS_PS_L4 .dcg-keypad-control-btn.dcg-selectable-btn,
+.TDS_PS_L5 .dcg-keypad-control-btn.dcg-selectable-btn,
+.TDS_PS_L6 .dcg-keypad-control-btn.dcg-selectable-btn,
+.TDS_PS_L7 .dcg-keypad-control-btn.dcg-selectable-btn,
+.TDS_PS_L8 .dcg-keypad-control-btn.dcg-selectable-btn {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.TDS_PS_L4 .dcg-keypad-control-toggle,
+.TDS_PS_L5 .dcg-keypad-control-toggle,
+.TDS_PS_L6 .dcg-keypad-control-toggle,
+.TDS_PS_L7 .dcg-keypad-control-toggle,
+.TDS_PS_L8 .dcg-keypad-control-toggle {
+  line-height: 38px;
+  height: 40px;
+  width: inherit !important;
+  max-width: inherit !important;
+  margin: 10px;
+}
+
+.TDS_PS_L2 .dcg-basic-expression .mq-ans::after,
+.TDS_PS_L3 .dcg-basic-expression .mq-ans::after {
+  bottom: -6px;
+  font-size: .4em;
+  width: 30px;
+  margin-left: -15px;
+  height: 15px;
+  line-height: 13px;
+}
+.TDS_PS_L4 .dcg-basic-expression .mq-ans::after,
+.TDS_PS_L5 .dcg-basic-expression .mq-ans::after,
+.TDS_PS_L6 .dcg-basic-expression .mq-ans::after,
+.TDS_PS_L7 .dcg-basic-expression .mq-ans::after,
+.TDS_PS_L8 .dcg-basic-expression .mq-ans::after {
+  bottom: -6px;
+  font-size: .4em;
+  width: 40px;
+  margin-left: -20px;
+  height: 20px;
+  line-height: 18px;
+}
+/*TDS-3268*/
+.TDS_PS_L3 .dcg-keypad-btn[dcg-command="fraction"],
+.TDS_PS_L4 .dcg-keypad-btn[dcg-command="fraction"],
+.TDS_PS_L5 .dcg-keypad-btn[dcg-command="fraction"],
+.TDS_PS_L6 .dcg-keypad-btn[dcg-command="fraction"],
+.TDS_PS_L7 .dcg-keypad-btn[dcg-command="fraction"],
+.TDS_PS_L8 .dcg-keypad-btn[dcg-command="fraction"],
+
+.TDS_PS_L3 .dcg-keypad-btn[dcg-command="a/b"],
+.TDS_PS_L4 .dcg-keypad-btn[dcg-command="a/b"],
+.TDS_PS_L5 .dcg-keypad-btn[dcg-command="a/b"],
+.TDS_PS_L6 .dcg-keypad-btn[dcg-command="a/b"],
+.TDS_PS_L7 .dcg-keypad-btn[dcg-command="a/b"],
+.TDS_PS_L8 .dcg-keypad-btn[dcg-command="a/b"]{
+	font-size: 1.9em !important;
+}
+
+
+#calculator .dcg-container,
+#calculator .dcg-calc-basic-main {
+  border: none;
+  background-color: transparent;
+}
+#calculator .dcg-basic-expression,
+#calculator .dcg-calc-basic-main,
+#calculator .dcg-basic-expression {
+  background-color: transparent;
+}
+#calculator .dcg-expressionitem .dcg-tab {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+#calculator .dcg-expressionitem.dcg-selected .dcg-tab,
+#calculator .dcg-expressionitem.dcg-dragging .dcg-tab {
+  background: #8dc6dd;
+}
+#calculator dcg-expressionitem .dcg-fade-container::after {
+  display: none;
+}
+
+/* specific fixes for specific buttons that have zoom issues at zoom 3 & 4 */
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="functions"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="functions"]{
+  font-size: 1.5em;
+}
+
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="stdevp"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="round"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="ABC"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="arcsin"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="arctan"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="arccos"]{
+  font-size: 2.0em;
+}
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="mean"],
+.TDS_PS_L4 #calculator .dcg-keypad-btn[dcg-command="stdev"]{
+  font-size: 2.3em;
+}
+
+.TDS_PS_L3 #calculator [role="application"] [role="complementary"],
+.TDS_PS_L4 #calculator [role="application"] [role="complementary"] {
+  min-height: 5.5em;
+}
+
+.TDS_PS_L1 #calculator .dcg-keypad-btn-container .dcg-mq-numerator,
+.TDS_PS_L1 #calculator .dcg-keypad-btn-container .dcg-mq-denominator{
+  font-size: 0.8em;
+}
+.TDS_PS_L2 #calculator .dcg-keypad-btn-container .dcg-mq-numerator,
+.TDS_PS_L2 #calculator .dcg-keypad-btn-container .dcg-mq-denominator{
+  font-size: 0.9em;
+}
+.TDS_PS_L3 #calculator .dcg-keypad-btn-container .dcg-mq-numerator,
+.TDS_PS_L3 #calculator .dcg-keypad-btn-container .dcg-mq-denominator{
+  font-size: 0.75em;
+}
+.TDS_PS_L4 #calculator .dcg-keypad-btn-container .dcg-mq-numerator,
+.TDS_PS_L4 #calculator .dcg-keypad-btn-container .dcg-mq-denominator{
+  font-size: 0.72em;
+}
+.TDS_PS_L3 #calculator .dcg-keypad-btn-container .dcg-mq-sup{
+  font-size: 0.9em;
+}
+.TDS_PS_L4 #calculator .dcg-keypad-btn-container .dcg-mq-sup{
+	font-size: 0.8em;
+}
+
+
+/* @group Big Cursors */
+
+		.TDS_MP_Black_XL, .TDS_MP_Black_XL * {
+			cursor: url('../../Shared/Images/pointers/blackXL.png') 2 3, auto !important;
+		}
+		.TDS_MP_White_XL, .TDS_MP_White_XL * {
+			cursor: url('../../Shared/Images/pointers/whiteXL.png') 2 3, auto !important;
+		}
+		.TDS_MP_Yellow_XL, .TDS_MP_Yellow_XL * {
+			cursor: url('../../Shared/Images/pointers/yellowXL.png') 2 3, auto !important;
+		}
+		.TDS_MP_Red_XL, .TDS_MP_Red_XL * {
+			cursor: url('../../Shared/Images/pointers/redXL.png') 2 3, auto !important;
+		}
+		.TDS_MP_Green_XL, .TDS_MP_Green_XL * {
+			cursor: url('../../Shared/Images/pointers/greenXL.png') 2 3, auto !important;
+		}
+
+		.TDS_MP_Black_L, .TDS_MP_Black_L * {
+			cursor: url('../../Shared/Images/pointers/blackL.png') 1 2, auto !important;
+		}
+		.TDS_MP_White_L, .TDS_MP_White_L * {
+			cursor: url('../../Shared/Images/pointers/whiteL.png') 1 2, auto !important;
+		}
+		.TDS_MP_Yellow_L, .TDS_MP_Yellow_L * {
+			cursor: url('../../Shared/Images/pointers/yellowL.png') 1 2, auto !important;
+		}
+		.TDS_MP_Red_L, .TDS_MP_Red_L * {
+			cursor: url('../../Shared/Images/pointers/redL.png') 1 2, auto !important;
+		}
+		.TDS_MP_Green_L, .TDS_MP_Green_L * {
+			cursor: url('../../Shared/Images/pointers/greenL.png') 1 2, auto !important;
+		}
+
+/* @end */
+
+/* TDS-10619 */
+.TDS_PS_L2 #calculator .dcg-abc-audio-container .dcg-keypad-btn[dcg-command="ABC"] .dcg-keypad-btn-content, 
+.TDS_PS_L3 #calculator .dcg-abc-audio-container .dcg-keypad-btn[dcg-command="ABC"] .dcg-keypad-btn-content, 
+.TDS_PS_L4 #calculator .dcg-abc-audio-container .dcg-keypad-btn[dcg-command="ABC"] .dcg-keypad-btn-content {
+  font-size: 20px;
+}
+/* TDS-10805 */
+.dcg-calculator-api-container .dcg-settings-container .dcg-editable-mathquill-container .dcg-mathquill-wrapper {
+    font-size: 12px;
+}

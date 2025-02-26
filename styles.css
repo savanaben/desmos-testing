@@ -1,0 +1,387 @@
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent double scrollbars */
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.toolbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.drag-area-indicator {
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(200, 200, 200, 0.1);
+    text-align: center;
+    color: #666;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 600px; /* Minimum height to ensure calculator fits */
+}
+
+.drag-area-indicator p {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 auto 20px;
+    z-index: 2;
+}
+
+#calculator-container {
+    position: absolute;
+    width: 400px;
+    /* Remove fixed height, will be set by JavaScript */
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000; /* Ensure it stays on top */
+    top: 50px; /* Position it below the indicator text */
+    left: 50px; /* Position it from the left edge */
+    display: flex;
+    flex-direction: column;
+}
+
+.handle {
+    background-color: rgb(235, 235, 235);
+    padding: 4px 8px 4px 8px;
+    cursor: move;
+    text-align: left;
+    height: 41px;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    border-bottom: 1px solid rgb(105, 105, 105);
+    flex-shrink: 0;
+}
+
+.bottom-bar {
+    height: 30px;
+    background-color: rgb(235, 235, 235);
+    border-top: 1px solid rgb(105, 105, 105);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 0px;
+    flex-shrink: 0;
+    position: relative; /* Add position relative */
+}
+
+.resize-handle {
+    width: 20px;
+    height: 20px;
+    background-color: #c9c9c9;
+    cursor: se-resize;
+    z-index: 1001; /* Ensure it's above the calculator */
+    border-radius: 3px;
+    border: 1px solid #888;
+    position: absolute;
+    right: 4px;
+    bottom: 5px;
+}
+
+
+.resizing {
+    background-color: #777 !important; /* Change color during resize */
+}
+
+#calculator {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.draggable:active {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow when dragging */
+}
+
+.draggable.dragging {
+    /* opacity: 0.8; */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s ease;
+}
+
+
+#calculator {
+    position: relative;
+    width: 100%;
+}
+
+#calculator .dcg-expressions-branding,
+#calculator .dcg-graphpaper-branding {
+    display: none;
+}
+
+.TDS_PS_L1 #calculator .dcg-main,
+.TDS_PS_L1 #calculator .dcg-basic-list,
+.TDS_PS_L1 #calculator .dcg-matrix-list {
+    font-size: 1.25em;
+}
+
+.TDS_PS_L2 #calculator .dcg-main,
+.TDS_PS_L2 #calculator .dcg-basic-list,
+.TDS_PS_L2 #calculator .dcg-matrix-list {
+    font-size: 1.5em;
+}
+
+.TDS_PS_L3 #calculator .dcg-main,
+.TDS_PS_L3 #calculator .dcg-basic-list,
+.TDS_PS_L3 #calculator .dcg-matrix-list {
+    font-size: 2em;
+}
+
+
+
+
+/* experimental in turning off scaling of font size settings increase button
+so that we don't double up on font size increase */
+
+.dcg-calculator-api-container-v1_10 .dcg-mq-math-mode {
+    font-size: 115%!important;
+}
+
+.dcg-calculator-api-container-v1_10 .dcg-projector-mode .dcg-expressionitem .dcg-create-sliders .dcg-msg {
+    font-size: 80% !important;
+}
+
+.dcg-calculator-api-container-v1_10 .dcg-projector-mode .dcg-expressionitem .dcg-fade-container .dcg-evaluation {
+    font-size: 100% !important;
+}
+
+
+
+
+/* the top gear button that shows the red blue buttons */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-container .dcg-expression-top-bar {
+    font-size: 1.20em;
+}
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-container .dcg-expression-top-bar {
+    font-size: 1.20em;
+}
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-container .dcg-expression-top-bar {
+    font-size: 1.20em;
+}
+
+
+
+
+/* keypad font size */
+
+.TDS_PS_L1 #calculator .dcg-basic-keypad {
+    font-size: 1.25em;
+}
+
+.TDS_PS_L2 #calculator .dcg-basic-keypad {
+    font-size: 1.5em;
+}
+
+.TDS_PS_L3 #calculator .dcg-basic-keypad {
+    font-size: 2em;
+}
+
+/* audio keypad font size */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-basic-keypad .dcg-audio-keypad-container {
+    font-size: .83em;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-basic-keypad .dcg-audio-keypad-container {
+    font-size: .8em;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-basic-keypad .dcg-audio-keypad-container {
+    font-size: .7em;
+}
+
+
+/* keypad height */
+.TDS_PS_L2 #calculator .dcg-keypad-btn-container {
+    height: 50px;
+}
+
+.TDS_PS_L3 #calculator .dcg-keypad-btn-container {
+    height: 55px;
+}
+
+
+
+
+/* functions menu width */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-keypad .dcg-functions-popover .dcg-popover-interior {
+    width: auto;
+}   
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-keypad .dcg-functions-popover .dcg-popover-interior {
+    width: 350px;
+}  
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-keypad .dcg-functions-popover .dcg-popover-interior {
+    width: 470px;
+}  
+
+
+
+/* Settings container adjustments for different zoom levels */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-settings-view-container .dcg-settings-container {
+    width: 320px;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-settings-view-container .dcg-settings-container {
+    width: 350px;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-settings-view-container .dcg-settings-container {
+    width: 450px;
+}
+
+
+
+
+/* settings wrench button popover adjustments */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-settings-container {
+    font-size: 1.2em;
+ 
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-settings-container {
+    font-size: 1.4em;
+   
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-settings-container {
+    font-size: 1.8em;
+  
+} 
+
+
+/*  item in expression menu adjustments */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover .dcg-new-item i {
+width: auto;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover .dcg-new-item i {
+width: auto;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover .dcg-new-item i {
+width: auto;
+} 
+
+/*  expression menu adjustments */
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover {
+    font-size: 1.25rem;
+
+}
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover {
+    font-size: 1.5rem;
+
+}
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-add-expression-dropdown.dcg-popover {
+    font-size: 2rem;
+
+}
+
+
+.TDS_PS_L1 .dcg-calculator-api-container-v1_10 .dcg-expression-bottom>div {
+    font-size: 1.25rem;
+}
+
+.TDS_PS_L2 .dcg-calculator-api-container-v1_10 .dcg-expression-bottom>div {
+    font-size: 1.5rem;
+}
+
+.TDS_PS_L3 .dcg-calculator-api-container-v1_10 .dcg-expression-bottom>div {
+    font-size: 2rem;
+}
+
+
+/* Specific keypad button adjustments */
+
+/* Functions button */
+
+
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="functions"]{
+  font-size: .75em;
+}
+
+
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="functions"]{
+  font-size: .75em;
+}
+
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="ABC"]{
+  font-size: .75em;
+}
+
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="ABC"]{
+  font-size: .55em;
+}
+
+
+/* .TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="ABC"],
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="describe-point"],
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="describe-axes"],
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="describe-curve"],
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="hear-graph"],
+.TDS_PS_L2 #calculator .dcg-keypad-btn[dcg-command="off"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="ABC"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="describe-point"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="describe-axes"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="describe-curve"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="hear-graph"],
+.TDS_PS_L3 #calculator .dcg-keypad-btn[dcg-command="off"]{
+  font-size: .7em;
+} */
+

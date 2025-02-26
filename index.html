@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desmos Calculator Testing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=abea05212146402bbdc2e5bb52050802"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="toolbar">
+            <h3 style="margin: 0px;">Desmos Calculator Zoom Testing</h3>
+            <div class="zoom-controls">
+                <button id="zoom-out">Zoom Out</button>
+                <span id="zoom-level">100% (L0)</span>
+                <button id="zoom-in">Zoom In</button>
+            </div>
+        </div>
+
+        <div class="drag-area-indicator">
+
+            
+            <div id="calculator-container" class="draggable">
+                <div class="handle">Graphing Calculator</div>
+                <div id="calculator"></div>
+                <div class="bottom-bar">
+                    <div class="resize-handle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
